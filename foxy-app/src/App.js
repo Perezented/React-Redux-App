@@ -1,6 +1,7 @@
 import React from 'react';
-import {FoxyImg} from './components/FoxyImg'
 import './App.css';
+
+import FoxyImg from './components/FoxyImg'
 
 function App() {
   return (

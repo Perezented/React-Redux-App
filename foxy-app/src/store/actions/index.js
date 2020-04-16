@@ -4,7 +4,7 @@ export const FETCH_IMAGE_FAILURE = 'FETCH_IMAGE_FAILURE'
 
 export const fetchImage = () => {
     return dispatch => {
-        dispatch({type: FETCH_IMAGE_FAILURE})
+        dispatch({type: 'FETCH_IMAGE_START'})
         axios.get('https://randomfox.ca/floof/')
         .then(response=> {
             console.log(response)
@@ -12,7 +12,7 @@ export const fetchImage = () => {
         })
         .catch(err => dispatch({
             type: FETCH_IMAGE_FAILURE,
-            payload: `Error ${err.response.status}: ${err.response.data}`
+            payload: `Error: ${console.log(err)}`
         }))
     }
 }
