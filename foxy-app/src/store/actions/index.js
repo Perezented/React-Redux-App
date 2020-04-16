@@ -2,14 +2,14 @@ import axios from 'axios'
 
 export const FETCH_IMAGE_FAILURE = 'FETCH_IMAGE_FAILURE'
 
-export const fetchImage = () => {
+export const fetchItem = () => {
     return dispatch => {
         dispatch({type: 'FETCH_IMAGE_START'})
         axios
-        .get('https://api.clashofclans.com/v1/clans')
+        .get('https://api.adviceslip.com/advice')
         .then(response=> {
-            console.log(response)
-            //dispatch({type: 'FETCH_QUOTE_SUCCESS', payload: res.data....})
+            console.log(response.data.slip.advice, response)
+            dispatch({type: 'FETCH_IMAGE_SUCCESS', payload: response.data.slip})
         })
         .catch(err => dispatch({
             type: 'FETCH_IMAGE_FAILURE',

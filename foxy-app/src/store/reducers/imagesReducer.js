@@ -1,10 +1,10 @@
-const initialState ={
-    img: '',
+const initialState = {
+    quote: '',
     isFetching: false,
     error: '',
 }
 
-export const imagesReducer = (state=initialState, action) => {
+export const imagesReducer = (state = initialState, action) => {
     switch(action.type){
         case 'FETCH_IMAGE_START':
             return {
@@ -15,7 +15,7 @@ export const imagesReducer = (state=initialState, action) => {
             return {
                 ...state,
                 isFetching: false,
-                image: action.payload,
+                quote: action.payload,
                 error: ''
             }
             case 'FETCH_IMAGE_FAILURE':
