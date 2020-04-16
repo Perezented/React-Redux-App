@@ -9,7 +9,7 @@ export const fetchItem = () => {
         .get('https://api.adviceslip.com/advice')
         .then(response=> {
             console.log(response.data.slip.advice, response)
-            dispatch({type: 'FETCH_IMAGE_SUCCESS', payload: response.data.slip})
+            dispatch({type: 'FETCH_IMAGE_SUCCESS', payload: response.data.slip.advice})
         })
         .catch(err => dispatch({
             type: 'FETCH_IMAGE_FAILURE',

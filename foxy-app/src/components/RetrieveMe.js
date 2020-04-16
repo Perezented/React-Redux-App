@@ -11,10 +11,15 @@ const RetrieveMe = props => {
 
     // console.log('This is the no more about foxes: ')
     console.log(props)
-    return (     
-        <h1>Everyday is a good day!</h1>
-        
-        )
+    return (<>
+        <h1>Everyday is a great day!</h1>
+      {props.quote && <h3>{props.quote}</h3>}
+        {props.isFetching && (
+            <Loader type="Circles" color="#00BFFF" height={80} width={80} />      )}
+      <button onClick={props.fetchItem}>Get a different refreshing quote!</button>
+
+    </>
+    )
 }
 
 const mapStateToProps = state => {
