@@ -18,6 +18,9 @@ const FoxyImage = props => {
 
 const mapStateToProps = state => {
     console.log(state)
+    return{
+         
+    }
 }
 
 export default connect(mapStateToProps, {fetchImage})(FoxyImage)
