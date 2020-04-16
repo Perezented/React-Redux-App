@@ -15,3 +15,7 @@ export const FoxyImg =()=>{
 
         )
 }
+
+const mapStateToProps = state => {
+    console.log(state)
+}
