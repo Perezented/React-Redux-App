@@ -11,6 +11,11 @@ export const fetchData = () => {
             .get('https://api.ratesapi.io/api/latest?base=USD')
             .then((res) => {
                 console.log(res);
+                console.log(
+                    'yoookiiidddd',
+                    Object.keys(res.data.rates),
+                    Object.values(res.data.rates)
+                );
                 dispatch({
                     type: FETCH_DATA_SUCCESS,
                     payload: res.data,
@@ -20,7 +25,7 @@ export const fetchData = () => {
                 console.log(err);
                 dispatch({
                     type: FETCH_DATA_FAILURE,
-                    payload: err.data,
+                    payload: err,
                 });
             });
     };
