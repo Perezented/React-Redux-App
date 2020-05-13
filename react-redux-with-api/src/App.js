@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import Header from './components/Header';
+import DisplayedData from './components/DisplayedData';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
                 <img src={logo} className="App-logo" alt="logo" />
                 <Header />
             </header>
+            <DisplayedData />
         </div>
     );
 }
