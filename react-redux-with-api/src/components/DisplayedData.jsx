@@ -9,26 +9,21 @@ import { Columns, MainSection } from './Styled-Comp';
 
 const DisplayedData = (props) => {
     console.log(props);
-    const someArr = {};
     useEffect(() => {
         props.fetchData();
     }, []);
     return (
         <section>
+            {!props.dataArray && (
+                <MainSection>
+                    {' '}
+                    <h1>Loading please wait...</h1>
+                </MainSection>
+            )}
             {props.dataArray && (
                 <MainSection>
                     <h2>Currently based off of the {props.dataArray.base}</h2>
                     <h3>for the date of {props.dataArray.date}</h3>
-                    {console.log(props.dataArray.rates)}
-                    {console.log(
-                        Object.keys(props.dataArray.rates).filter(
-                            (currencyType, i) => {
-                                if (currencyType === props.dataArray.base) {
-                                    return currencyType, i;
-                                }
-                            }
-                        )
-                    )}
                     <Columns>
                         {' '}
                         <div>

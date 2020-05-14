@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Columns = styled('section')`
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    width: 40%;
     margin: 1% 30%;
     div {
-        border: 1px solid blue;
+        margin: 5px;
     }
 `;
 export const MainSection = styled('div')`
