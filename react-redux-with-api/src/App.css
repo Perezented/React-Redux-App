@@ -1,0 +1,10 @@
+.App .App-header {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    border: 1px solid black;
+    justify-items: start;
+}
+.App-logo {
+    height: 10vh;
+}
